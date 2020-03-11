@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      CineSercla
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content >
+
+      <ion-card *ngFor="let filme of lista_filmes">
+      
+        <ion-item>
+          <h2 class="feed_title">{{ filme.original_title }}</h2>
+          <p class="feed_date">{{ filme.release_date }}</p>
+        </ion-item>
+      
+        <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path">
+      
+        <ion-card-content>
+          <p>{{ filme.overview }}</p>
+        </ion-card-content>
+      
+        
+      
+      </ion-card>
+      </ion-content>
+  
+
+<ion-card>
+  <ion-card-header>Ingresso</ion-card-header>
+    <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+        <ion-label ></ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >Inteira</ion-label>
+      </ion-col>
+        <ion-col col-4>
+        <ion-label >Meia</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+        <ion-label >2D</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >R$ 20,00</ion-label>
+      </ion-col>
+        <ion-col col-4>
+        <ion-label >R$ 10,00</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+        <ion-label >3D</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >R$ 24,00</ion-label>
+      </ion-col>
+        <ion-col col-4>
+        <ion-label >R$ 12,00</ion-label>
+      </ion-col>
+    </ion-row>
+</ion-card>
